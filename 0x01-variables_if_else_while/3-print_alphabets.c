@@ -1,28 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - entry point.
+ * main - entry and exit point of program
+ * no arguments
  *
- * Desscription: prints lowercase and then uppercase alphabets,
- * followed by a new line
- * Return: Always 0 on success.
+ * Description: prints alphabet in lower case then uppercase
+ * Return: 0 value on success
  */
 int main(void)
 {
 	int i;
 
-	i = 97;
-	while (i <= 122)
-	{
+	for (i = 97; i < 123; i++) /* lowercase alpha in ascii */
 		putchar(i);
-		1++;
-	}
-	i = 65;
-	while (i <= 90)
-	{
+	for (i = 65; i < 91; i++) /* uppercase alpha in ascii */
 		putchar(i);
-		i++;
-	}
-	putchar (10);
+	putchar(10); /* newline ascii */
 	return (0);
 }
