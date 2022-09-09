@@ -1,8 +1,7 @@
 #include <unistd.h>
 /**
  * main - program starts and ends here
- * takes no arguments
- *
+ * takes no arguments*
  * Description: prints a string to the stderr stream with write()
  * Return: return value is 1
  */
