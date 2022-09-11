@@ -12,9 +12,11 @@ int main(void)
 	int i;
 
 	for (i = 97; i < 123; i++) /* lowercase alpha in ascii */
+	{
+		if (i == 113 || i == 101) /* except when q or e */
+		continue; /* skip to next iteration*/
 		putchar(i);
-	for (i = 65; i < 91; i++) /* uppercase alpha in ascii */
-		putchar(i);
-	putchar(10); /* newline ascii */
+	}
+	putchar(10);
 	return (0);
 }
