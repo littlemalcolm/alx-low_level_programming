@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "main.h"
 
 /**
  * main - Write a program that prints _putchar ,
