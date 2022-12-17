@@ -1,5 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
+/** 
+* main - Entry point.
+* Takes no arguments.
+* 
+* Description: prints a string followed by a newline using _putchar function.
+* Return: 0 if succesful.
+*/
 int main(void)
 {
 	_putchar('_');
@@ -10,3 +17,7 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
+	_putchar("\n");
+
+	return (0);
+};
