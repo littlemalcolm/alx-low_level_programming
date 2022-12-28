@@ -8,25 +8,12 @@
  */
 int print_last_digit(int x)
 {
-	int l, abs_l;
+	int last_digit = x % 10;
 
-	l = x % 10;
-	abs_l = _abs(1);
-	_putchar(abs_l + 48);
+	if (last_digit < 0)
+		last_digit *= -1;
 
-	return (abs_l);
-}
+	_putchar(last_digit + '0');
 
-/**
- * _abs - Computes the absolute value of an ingeter.
- * @x: Integer to be operated on.
- *
- * Return: Absolute value.
- */
-int _abs(int x)
-{
-	if (x < 0)
-		return (x * -l);
-	else
-		return (x);
+	return (last_digit);
 }
