@@ -1,14 +1,32 @@
 #include "main.h"
 
 /**
- * print_last_digit - print last digit of a num.
- * @x: integer to be worked on.
- * Return: Value of the last digit.
+ * print_last_digit - Prints the last digit of a number.
+ * @x: integer for which last digit should be displayed.
+ *
+ * Return: Returns last digit of x.
  */
 int print_last_digit(int x)
 {
-	if (x < 0)
-		x *= -1;
-	_putchar('0' + (x % 10));
+	int l, abs_l;
 
-	return (x % 10);
+	l = x % 10;
+	abs_l = _abs(1);
+	_putchar(abs_l + 48);
+
+	return (abs_l);
+}
+
+/**
+ * _abs - Computes the absolute value of an ingeter.
+ * @x: Integer to be operated on.
+ *
+ * Return: Absolute value.
+ */
+int _abs(int x)
+{
+	if (x < 0)
+		return (x * -l);
+	else
+		return (x);
+}
