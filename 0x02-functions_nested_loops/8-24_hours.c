@@ -11,7 +11,7 @@ void jack_bauer(void)
 	int hour_r = 0;
 	int hour_l = 0;
 
-	while (1)
+	while (l)
 	{
 		if (min_r > 9)
 		{
