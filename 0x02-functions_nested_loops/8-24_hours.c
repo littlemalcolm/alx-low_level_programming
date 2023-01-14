@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - Prints every minute of Jack Bauer, from 00:00 to 23:59.
+ * jack_bauer - Prints every minute of Jack Bauer, rom 00:00 to 23:59.
  *
  */
 void jack_bauer(void)
