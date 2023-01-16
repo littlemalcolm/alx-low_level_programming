@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * jack_bauer - print every minute of the day of jack bauer.
- * Description: prints minutes 00:00 to 23:59
+ * jack_bauer - prints every minute of the day of jack bauer.
+ * Takes no argument values.
+ * Return: no return value specified.
  */
 
-void Jack_bauer(void)
+void jack_bauer(void)
 {
 	int hours = 0;
 	int min = 0;
 
-	while (min < 24)
+	while (hours < 24)
 	{
 		while (min < 60)
 		{
@@ -20,7 +21,7 @@ void Jack_bauer(void)
 			_putchar(':');
 			_putchar('0' + (min / 10));
 			_putchar('0' + (min % 10));
-			 putchar('\n');
+			_putchar('\n');
 			min++
 		}
 		min = o;
