@@ -15,7 +15,7 @@ int main(void)
 	x = 1;
 	y = 2;
 	sum = 0;
-	for (i = 0, i <= 33, i++)
+	for (i = 0; i <= 33; i++)
 	{
 		if (x <= 4000000 && (x % 2) == 0)
 			sum = sum + x;
