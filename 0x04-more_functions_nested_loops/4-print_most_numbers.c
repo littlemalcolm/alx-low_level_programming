@@ -13,12 +13,15 @@ void print_most_numbers(void)
 	while (most_num <= 57)
 	{
 		if (most_num == 50 || most_num == 52)
-	{
+		{
+
 		most_num++;
 		continue;
 		}
-	else
-	{
-	_putchar(most_num);
-	most_num++;
-																						}
+		else
+		{
+			_putchar(most_num);
+			most_num++;
+		}
+	}
+}
