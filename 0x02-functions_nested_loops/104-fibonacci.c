@@ -30,7 +30,7 @@ int main(void)
 
 	for (i = 0; i < 7; i++)
 	{
-		printf(", %lu", (k2 / 1000000000));
+		printf(", %lu", k1 + (k2 / 1000000000));
 		printf("%lu", k2 % 1000000000);
 		k1 = k1 + j1;
 		j1 = k1 - j1;
