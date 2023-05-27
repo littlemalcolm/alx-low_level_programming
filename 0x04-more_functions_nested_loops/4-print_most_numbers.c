@@ -24,4 +24,5 @@ void print_most_numbers(void)
 			most_num++;
 		}
 	}
+	_putchar(10);
 }
