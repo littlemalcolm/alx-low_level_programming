@@ -20,9 +20,9 @@ int main(void)
 		if (x == 100)
 			printf("Buzz");
 		else if (x % 3 == 0 && (x % 3 != x % 5))
-			printf("Fizz");
+			printf("Fizz ");
 		else if (x % 5 == 0 && (x % 5 != x % 3))
-			printf("Buzz");
+			printf("Buzz ");
 		else if (x % 3 == 0 && x % 5 == 0)
 			printf("FizzBuzz");
 		else
