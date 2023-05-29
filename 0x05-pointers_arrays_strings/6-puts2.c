@@ -10,6 +10,7 @@ void puts2(char *str)
 {
 	int i;
 
+
 	for (i = 0; i < _strlen(str); i = i + 2)
 	{
 		_putchar(str[i]);
@@ -31,7 +32,7 @@ int _strlen(char *s)
 	{
 		if (*(s + i) == 0)
 			break;
-			len++;
+		len++;
 	}
 	return (len);
 }
