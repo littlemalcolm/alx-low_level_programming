@@ -14,7 +14,7 @@ void puts_half(char *str)
 
 	if (_strlen(str) % 2 != 0)
 	{
-		for (i = (_strlen(str) + 1) / 2 < _strlen(str); i++)
+		for (i = (_strlen(str) + 1) / 2; i < _strlen(str); i++)
 		{
 			_putchar(str[i]);
 		}
@@ -41,7 +41,7 @@ int _strlen(char *s)
 
 	for (i = 0; 1 ; i++) /* 1 says if True i.e s still exists */
 	{
-		if (*(s + 1) == 0)
+		if (*(s + i) == 0)
 			break;
 		len++;
 	}
