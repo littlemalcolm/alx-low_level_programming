@@ -18,13 +18,15 @@ int _atoi(char *s)
 	{
 		len++;
 	}
-	for (i = 0; i < len && numbs == 0; i++)
+	for (i = 0; i < len && nums == 0; i++)
 	{
 		if (s[i] == '-')
 			++j;
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			digit = -digit;
+			digit = s[i] - 48;
+			if (j % 2)
+				digit = -digit;
 		n = n * 10 + digit;
 		nums = 1;
 		if (s[i + 1] < 48 || s[i + 1} > 57)
