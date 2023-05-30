@@ -27,11 +27,11 @@ int _atoi(char *s)
 			digit = s[i] - 48;
 			if (j % 2)
 				digit = -digit;
-		n = n * 10 + digit;
-		nums = 1;
-		if (s[i + 1] < 48 || s[i + 1} > 57)
-			break;
-		nums = 0;
+			n = n * 10 + digit;
+			nums = 1;
+			if (s[i + 1] < 48 || s[i + 1} > 57)
+				break;
+			nums = 0;
 		}
 	}
 	if (nums == 0)
