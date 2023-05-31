@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
-  * _strcat - Concatenatesmtwo strings.
+  * _strcat - Concatenates two strings.
   * @dest: Pointer to first argument of char type.
-  * @scr: Pointer to second argument of charntype.
-  * 
+  * @src: Pointer to second argument of charntype.
+  *
   * Return: Returns pointer to the resulting string in dest.
   */
-char *_strcat(char *dest, char *str)
+char *_strcat(char *dest, char *src)
 {
 	int c, d;
 
@@ -21,8 +21,8 @@ char *_strcat(char *dest, char *str)
 				dest[c] = src[d];
 				if (src[d] == 0)
 					break;
-				c++
-				d++
+				c++;
+				d++;
 			}
 			break;
 		}
