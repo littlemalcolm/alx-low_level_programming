@@ -20,7 +20,7 @@ int _strcmp(char *s1, char *s2)
 	{
 		if (s1[i] == 0) /* if the string are thesame, break at end */
 			break;
-			i++;
+		i++;
 	}
 
 	return (s1[i] - s2[i]);
