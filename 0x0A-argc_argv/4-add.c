@@ -27,11 +27,11 @@ int main(int argc, char **argv)
 			sum += strtol(argv[i], &endptr, BASE);
 			if (*endptr != 0)
 			{
-																			printf("Error\n");
-																			return (1);
+				printf("Error\n");
+				return (1);
 			}
 		}
-			printf("%d\n", sum);
-			return (0);
+		printf("%d\n", sum);
+		return (0);
 	}
 }
