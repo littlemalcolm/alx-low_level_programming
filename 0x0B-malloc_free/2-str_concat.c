@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 		;
 
 	mptr = (char *)malloc(sizeof(char) * size + 1);
-	if mptr == (NULL)
+	if (mptr == NULL)
 		return (NULL);
 
 	for (i = 0; s1 && (*(s1 + i)); i++)
