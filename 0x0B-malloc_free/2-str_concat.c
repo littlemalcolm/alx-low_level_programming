@@ -16,11 +16,13 @@ char *str_concat(char *s1, char *s2)
 		;
 	for (i = 0, s2 && (*(s2 + i)) i++, size++)
 		;
-	mptr == (NULL)
+
+	mptr = (char *)malloc(sizeof(char) * size + 1);
+	if mptr == (NULL)
 		return (NULL);
 
 	for (i = 0; s1 && (*(s1 + i)); i++)
-		*(mptr + 1) = *(s1 + i);
+		*(mptr + i) = *(s1 + i);
 
 	for (j = 0; s2 && (*(s2 + j)); j++, i++)
 		*(mptr + i) = *(s2 + j);
