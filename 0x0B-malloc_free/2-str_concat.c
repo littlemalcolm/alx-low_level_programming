@@ -14,7 +14,7 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; s1 && (*(s1 + i)); i++, size++)
 		;
-	for (i = 0, s2 && (*(s2 + i)) i++, size++)
+	for (i = 0, s2 && (*(s2 + i)); i++, size++)
 		;
 
 	mptr = (char *)malloc(sizeof(char) * size + 1);
