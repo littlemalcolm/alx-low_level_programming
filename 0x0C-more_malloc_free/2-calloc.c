@@ -10,18 +10,22 @@
   */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	char *mptr;
+	void *ptr;
+	unsigned int i; /* match unsigned arguments */
 
-	if (size == 0 || nmemb == 0)
+	if (nmemb <= 0 || size <= 0) /* validate input */
 		return (NULL);
 
-	mptr = malloc(size * nmemb);
-	if (mptr == NULL)
+	/* allocate memory and check if error */
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < (nmemb * size); i++)
-		mptr[i] = 0;
+	/* set allocated memory values to 0 */
+	for (i = 0; i < nmemb * size; i++)
+		*((char *)ptr + i) = 0; /* type cast assigning values*/
 
-		return (mptr);
+	return (ptr);
 }
+
+
