@@ -1,3 +1,5 @@
+#include <stdio.h> /* printf */
+#include <stdlib.h> /* atoi */
 #include "3-calc.h"
 
 /**
