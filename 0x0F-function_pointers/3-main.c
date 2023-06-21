@@ -3,44 +3,44 @@
 #include "3-calc.h"
 
 /**
-  * main - Entry point of program.
-  * @argc: Number of arguments taken by function, including program name.
-  * @argv: Array of arguments.
-  *
-  * Description: Takes in to perform and arithmetic operation.
-  * Return: 0 if successful.
-  * Exits with code 98 if wrong number of arguments is passed.
-  * Exits with code 99 if operator is not found.
-  * Exits with code 100 if divisor is 0.
+  * main - when user runs main,
+  * user should give two integers and an operator and
+  * main will calculate the math via a function pointer.
+  * prints sum, difference, product, dividend, or remainder
+  * @argc: argument counter
+  * @argv: arguments
+  * Return: 0 on sucess
   */
-int main(int argc, char **argv)
-	int a, b, result;
 
+int main(int argc, char *argv[])
+{
+	int n1, n2;
+	int (*f)(int, int);
+
+	/* validate input */
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (strlen(argv[2]) != 1 || (argv[2][0] != '+' && argv[2][0] != '-' &&
-		argv[2][0] != '*' && argv[2][0] != '/' &&
-		argv[2][0] != '%'))
+
+	/* convert user input to ints and point to correct operator function */
+	n1 = atoi(argv[1]);
+	n2 = atoi(argv[3]);
+	f = get_op_func(argv[2]);
+
+	if (f == NULL || (argv[2][1] != '\0'))
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-
-	if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && argv[3][0] == '0')
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	result = get_op_func(argv[2])(a, b);
-	printf("%d\n", result);
+	printf("%d\n", f(n1, n2)); /* calculate via function ptr */
 
 	return (0);
 }
-
